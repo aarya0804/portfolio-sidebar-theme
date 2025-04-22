@@ -21,7 +21,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.title = "";
-    this.t = this.t || {};
+    // this.t = this.t || {};
     this.t = {
       ...this.t,
       title: "Title",
