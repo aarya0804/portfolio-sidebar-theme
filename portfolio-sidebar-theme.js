@@ -13,6 +13,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
  * @element portfolio-sidebar-theme
  */
 export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
+  
   static get tag() {
     return "portfolio-sidebar-theme";
   }
