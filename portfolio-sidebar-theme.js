@@ -20,7 +20,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
 
   constructor() {
     super();
-    this.title = "";
+    this.title = "Portfolio";
     // this.t = this.t || {};
     this.t = {
       ...this.t,
@@ -53,10 +53,18 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
       }
-      .wrapper {
+      portfolio-menu {
+        width: 250px;
+        border-right: 2px solid var(--ddd-theme-accent);
+      }
+      portfolio-content {
+        flex-grow: 1;
+        padding; 24px;
+      }
+      /* .wrapper {
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
-      }
+      } */
       h3 span {
         font-size: var(--portfolio-sidebar-theme-label-font-size, var(--ddd-font-size-s));
       }
@@ -64,12 +72,26 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   }
 
   // Lit render the HTML
+//   render() {
+//     return html`
+// <div class="wrapper">
+//   <h3><span>${this.t.title}:</span> ${this.title}</h3>
+//   <slot></slot>
+// </div>`;
+//   }
+
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
-</div>`;
+      <portfolio-menu
+      .pages="${this.pages}"
+      @menu-selected="${this._handleMenuSelected}">
+      </portfolio-menu>
+
+      <portfolio-content
+      .pages="${this.pages}"
+      .selectedPage="${this.selectedPage}">
+      </portfolio-content>
+    `;
   }
 
   /**

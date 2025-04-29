@@ -56,7 +56,7 @@ export class PortfolioMenuItem extends LitElement {
         background-color: var(--ddd-theme-primary-28); //lighter blue on hover
         color: var(--ddd-theme-default-white);
         outline: none;
-        border: 1px solid var(--ddd-theme-primary-38); //border on hover
+        border: 2px solid var(--ddd-theme-accent); //border on hover
       }
     `;
   }

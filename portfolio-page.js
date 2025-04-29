@@ -19,13 +19,13 @@ export class PortfolioPage extends LitElement {
     constructor() {
         super();
         this.title = "Portfolio Page";
-        this.pageNum = 0;
+        this.pagenumber = 0;
     }
 
     static get properties() {
         return {
             title: { type: String },
-            pageNum: { type: Number }
+            pagenumber: { type: Number }
         };
     }
 
@@ -40,12 +40,13 @@ export class PortfolioPage extends LitElement {
             border: 1px solid var(--ddd-theme-default-coalGrey);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
             font-family: var(--ddd-font-body, Arial, sans-serif);
+            border-top: 4px solid var(--ddd-theme-accent);
         }
 
         h2 {
             font-size: 28px;
             margin: 0 0 8px 0;
-            color: var(--ddd-theme-default-coalyGray);
+            color: var(--ddd-theme-default-accent);
         }
 
         .content {
@@ -56,8 +57,15 @@ export class PortfolioPage extends LitElement {
     }
 
     render() {
-        return html``
-
+        return html`
+        <div>
+            <h2>${this.title}</h2>
+            <div class="content">
+                <slot></slot>
+        </div>
+        </div>
+        `;
     }
-
 }
+
+globalThis.customElements.define(PortfolioPage.tag, PortfolioPage);
