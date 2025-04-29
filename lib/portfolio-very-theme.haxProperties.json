@@ -11,7 +11,7 @@
         "designTreatment": false
     },
     "gizmo": {
-        "title": "portfolio-very-theme",
+        "title": "portfolio-sidebar-theme",
         "description": "",
         "icon": "icons:android",
         "color": "purple",
@@ -41,7 +41,7 @@
     },
     "demoSchema": [
         {
-            "tag": "portfolio-very-theme",
+            "tag": "portfolio-page",
             "properties": {
               "title": "Sample property title"
             },
