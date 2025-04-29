@@ -8,12 +8,11 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
 
 /**
  * `portfolio-sidebar-theme`
- * 
+ *
  * @demo index.html
  * @element portfolio-sidebar-theme
  */
 export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
-
   static get tag() {
     return "portfolio-sidebar-theme";
   }
@@ -29,8 +28,8 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
     this.registerLocalization({
       context: this,
       localesPath:
-        new URL("./locales/portfolio-sidebar-theme.ar.json", import.meta.url).href +
-        "/../",
+        new URL("./locales/portfolio-sidebar-theme.ar.json", import.meta.url)
+          .href + "/../",
       locales: ["ar", "es", "hi", "zh"],
     });
   }
@@ -45,51 +44,58 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
 
   // Lit scoped styles
   static get styles() {
-    return [super.styles,
-    css`
-      :host {
-        display: block;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
-        font-family: var(--ddd-font-navigation);
-      }
-      portfolio-menu {
-        width: 250px;
-        border-right: 2px solid var(--ddd-theme-accent);
-      }
-      portfolio-content {
-        flex-grow: 1;
-        padding; 24px;
-      }
-      /* .wrapper {
+    return [
+      super.styles,
+      css`
+        :host {
+          display: block;
+          color: var(--ddd-theme-primary);
+          background-color: var(--ddd-theme-accent);
+          font-family: var(--ddd-font-navigation);
+        }
+        portfolio-menu {
+          width: 250px;
+          border-right: 2px solid var(--ddd-theme-accent);
+        }
+        portfolio-content {
+          flex-grow: 1;
+          padding: 24px;
+        }
+        /* .wrapper {
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
       } */
-      h3 span {
-        font-size: var(--portfolio-sidebar-theme-label-font-size, var(--ddd-font-size-s));
-      }
-    `];
+        h3 span {
+          font-size: var(
+            --portfolio-sidebar-theme-label-font-size,
+            var(--ddd-font-size-s)
+          );
+        }
+      `,
+    ];
   }
 
   // Lit render the HTML
-//   render() {
-//     return html`
-// <div class="wrapper">
-//   <h3><span>${this.t.title}:</span> ${this.title}</h3>
-//   <slot></slot>
-// </div>`;
-//   }
+  //   render() {
+  //     return html`
+  // <div class="wrapper">
+  //   <h3><span>${this.t.title}:</span> ${this.title}</h3>
+  //   <slot></slot>
+  // </div>`;
+  //   }
 
   render() {
     return html`
       <portfolio-menu
-      .pages="${this.pages}"
-      @menu-selected="${this._handleMenuSelected}">
+        .pages="${this.pages}"
+        @menu-selected="${this._handleMenuSelected}"
+      >
       </portfolio-menu>
 
       <portfolio-content
-      .pages="${this.pages}"
-      .selectedPage="${this.selectedPage}">
+        .pages="${this.pages}"
+        .selectedPage="${this.selectedPage}"
+      >
       </portfolio-content>
     `;
   }
@@ -103,4 +109,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(PortfolioSidebarTheme.tag, PortfolioSidebarTheme);
+globalThis.customElements.define(
+  PortfolioSidebarTheme.tag,
+  PortfolioSidebarTheme
+);
