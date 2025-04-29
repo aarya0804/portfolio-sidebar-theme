@@ -7,7 +7,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <meta name="Description" content="Demonstration for portfolio-very-theme" />
+    <meta
+      name="Description"
+      content="Demonstration for portfolio-sidebar-theme"
+    />
 
     <style>
       :root,
@@ -16,46 +19,73 @@
         margin: var(--ddd-spacing-0);
         padding: var(--ddd-spacing-0);
       }
-      #demo {
+      /* #demo {
         margin: var(--ddd-spacing-2);
       }
-      portfolio-very-theme {
+      portfolio-sidebar-theme {
         margin: var(--ddd-spacing-2);
         border: var(--ddd-border-md);
         border-radius: var(--ddd-radius-lg);
       }
-      portfolio-very-theme:hover {
+      portfolio-sidebar-theme:hover {
         box-shadow: var(--ddd-boxShadow-sm);
       }
       #example {
-        --portfolio-very-theme-font-size: var(--ddd-font-size-l);
+        --portfolio-sidebar-theme-font-size: var(--ddd-font-size-l);
         background-color: var(--ddd-accent-2);
         color: var(--ddd-primary-17);
-      }
+      } */
     </style>
-    <title>portfolio-very-theme</title>
+    <title>portfolio-sidebar-theme</title>
   </head>
 
   <body>
     <div id="demo">
-      <h1>portfolio-very-theme</h1>
+      <h1>portfolio-sidebar-theme</h1>
       <!-- this is going to do whatever the tag's defaults are -->
-      <h2>Default</h2>
-      <portfolio-very-theme></portfolio-very-theme>
-      <h2>Slot usage</h2>
-      <portfolio-very-theme data-accent="2" data-primary="17"
-        ><div>Sample slot content</div></portfolio-very-theme
-      >
-      <h2>Property usage</h2>
-      <portfolio-very-theme
-        id="example"
-        title="Sample property title"
-      ></portfolio-very-theme>
     </div>
-    <script type="module" src="./portfolio-very-theme.js"></script>
+    <script type="module" src="./portfolio-sidebar-theme.js"></script>
+    <portfolio-sidebar-theme>
+      <portfolio-page title="About me" pagenumber="1">
+        <p>
+          My name is Aarya and I'm a Human Centered Design and Development major
+          with Informatics focus.
+        </p>
+      </portfolio-page>
+      <portfolio-page title="About me" pagenumber="1">
+        <p>
+          My name is Aarya and I'm a Human Centered Design and Development major
+          with Informatics focus.
+        </p>
+      </portfolio-page>
+      <portfolio-page title="34gg34 2" pagenumber="2">
+        <p>
+          My name is Aarya and I'm a Human Centered Design and Development major
+          with Informatics focus.
+        </p>
+      </portfolio-page>
+      <portfolio-page title="fgd 3 me" pagenumber="3">
+        <p>
+          My name is Aarya and I'm a Human Centered Design and Development major
+          with Informatics focus.
+        </p>
+      </portfolio-page>
+      <portfolio-page title="dfgdf 4 me" pagenumber="4">
+        <p>
+          My name is Aarya and I'm a Human Centered Design and Development major
+          with Informatics focus.
+        </p>
+      </portfolio-page>
+      <portfolio-page title="Page 5 me" pagenumber="5">
+        <p>
+          My name is Aarya and I'm a Human Centered Design and Development major
+          with Informatics focus.
+        </p>
+      </portfolio-page>
+    </portfolio-sidebar-theme>
 
     <!-- Take HAX, the Web and you further down the rabbit hole -->
-    <style>
+    <!-- <style>
       #follow-the-white-rabbit {
         margin: var(--ddd-spacing-4) auto var(--ddd-spacing-16)
           var(--ddd-spacing-4);
@@ -90,6 +120,6 @@
         background-color: var(--ddd-theme-default-coalyGray);
         color: var(--ddd-theme-default-globalNeon);
       }
-    </style>
+    </style> -->
   </body>
 </html>
