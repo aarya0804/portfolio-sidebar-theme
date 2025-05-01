@@ -25,7 +25,6 @@ export class PortfolioMenuItem extends LitElement {
   static get properties() {
     return {
       title: { type: String },
-      //pageNumber: { type: Number }
     };
   }
 

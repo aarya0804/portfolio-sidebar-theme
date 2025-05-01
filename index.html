@@ -16,16 +16,18 @@
       :root,
       html,
       body {
-        margin: var(--ddd-spacing-0);
-        padding: var(--ddd-spacing-0);
+        font-family: Arial, sans-serif;
+        background-color: var(--ddd-theme-default-white);
       }
-      /* #demo {
-        margin: var(--ddd-spacing-2);
+      #demo {
+        text-align: center;
+        padding: 16px;
+        font-size: 32px;
+        color: var(--ddd-theme-primary);
       }
+
       portfolio-sidebar-theme {
-        margin: var(--ddd-spacing-2);
-        border: var(--ddd-border-md);
-        border-radius: var(--ddd-radius-lg);
+        display: block;
       }
       portfolio-sidebar-theme:hover {
         box-shadow: var(--ddd-boxShadow-sm);
@@ -34,92 +36,114 @@
         --portfolio-sidebar-theme-font-size: var(--ddd-font-size-l);
         background-color: var(--ddd-accent-2);
         color: var(--ddd-primary-17);
-      } */
+      }
+
+      .screen1 {
+        background-color: var(--ddd-theme-default-beige);
+        color: ar(--ddd-theme-default-white);
+      }
+
+      .screen2 {
+        background-color: var(--ddd-accent-1);
+        color: var(--ddd-theme-default-white);
+      }
+
+      .screen3 {
+        background-color: var(--ddd-theme-default-beige);
+        color: var(--ddd-theme-default-white);
+      }
+      .screen4 {
+        background-color: var(--ddd-accent-2);
+        color: var(--ddd-theme-default-white);
+      }
+      .screen5 {
+        background-color: var(--ddd-accent-3);
+        color: var(--ddd-theme-default-white);
+      }
+
+      #topbar {
+        position: fixed;
+        top: 0;
+        left: 265px;
+        height: 80px;
+        width: 100%;
+        background-color: var(--ddd-theme-primary-28, #062554);
+        color: var(--ddd-theme-default-white);
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+        margin-left: 0;
+        border-radius: 10px;
+        padding-left: 32px;
+      }
     </style>
-    <title>portfolio-sidebar-theme</title>
   </head>
 
   <body>
-    <div id="demo">
-      <h1>portfolio-sidebar-theme</h1>
-      <!-- this is going to do whatever the tag's defaults are -->
-    </div>
-    <script type="module" src="./portfolio-sidebar-theme.js"></script>
+    <div id="topbar">Aarya's Portfolio</div>
     <portfolio-sidebar-theme>
-      <portfolio-page title="About me" pagenumber="1">
+      <script type="module" src="./portfolio-sidebar-theme.js"></script>
+      <script type="module" src="./portfolio-page.js"></script>
+      <script
+        type="module"
+        src="https://unpkg.com/@haxtheweb/scroll-button/scroll-button.js?module"
+      ></script>
+      <portfolio-page
+        title="About me"
+        pagenumber="1"
+        id="page1"
+        class="screen1"
+      >
         <p>
           My name is Aarya and I'm a Human Centered Design and Development major
-          with Informatics focus.
+          with Informatics focus. I enjoy building digital experiences that are
+          thoughtful, accessible, and user-first.
         </p>
       </portfolio-page>
-      <portfolio-page title="About me" pagenumber="1">
+
+      <portfolio-page
+        title="Projects"
+        pagenumber="2"
+        id="page2"
+        class="screen2"
+      >
+        <li>Vista Travel App</li>
+        <li>Portfolio built with HAX</li>
+      </portfolio-page>
+
+      <portfolio-page title="Skills" pagenumber="3" id="page3" class="screen3">
         <p>
-          My name is Aarya and I'm a Human Centered Design and Development major
-          with Informatics focus.
+          Languages: Java, Python, HTML/CSS, JavaScript<br />
+          Tools: Figma, GitHub, Adobe, MySQL
         </p>
       </portfolio-page>
-      <portfolio-page title="34gg34 2" pagenumber="2">
+
+      <portfolio-page
+        title="Experience"
+        pagenumber="4"
+        id="page4"
+        class="screen4"
+      >
         <p>
-          My name is Aarya and I'm a Human Centered Design and Development major
-          with Informatics focus.
+          Undergraduate Learning Assistant (AI & Art)<br />
+          NSO Crew Member<br />
+          HAX Lab Intern
         </p>
       </portfolio-page>
-      <portfolio-page title="fgd 3 me" pagenumber="3">
+
+      <portfolio-page
+        title="Contact Me"
+        pagenumber="5"
+        id="page5"
+        class="screen5"
+      >
         <p>
-          My name is Aarya and I'm a Human Centered Design and Development major
-          with Informatics focus.
-        </p>
-      </portfolio-page>
-      <portfolio-page title="dfgdf 4 me" pagenumber="4">
-        <p>
-          My name is Aarya and I'm a Human Centered Design and Development major
-          with Informatics focus.
-        </p>
-      </portfolio-page>
-      <portfolio-page title="Page 5 me" pagenumber="5">
-        <p>
-          My name is Aarya and I'm a Human Centered Design and Development major
-          with Informatics focus.
+          Email: ava6560@psu.edu<br />
+          LinkedIn: linkedin.com/in/aarya0804
         </p>
       </portfolio-page>
     </portfolio-sidebar-theme>
-
-    <!-- Take HAX, the Web and you further down the rabbit hole -->
-    <!-- <style>
-      #follow-the-white-rabbit {
-        margin: var(--ddd-spacing-4) auto var(--ddd-spacing-16)
-          var(--ddd-spacing-4);
-        background-color: var(--ddd-accent-4);
-        color: var(--ddd-theme-default-coalyGray);
-      }
-      #follow-the-white-rabbit[open] summary {
-        background-color: var(--ddd-accent-4) !important;
-        color: var(--ddd-theme-default-coalyGray);
-      }
-      #follow-the-white-rabbit[open] .content {
-        padding: var(--ddd-spacing-0) var(--ddd-spacing-4);
-      }
-      #follow-the-white-rabbit ul,
-      #follow-the-white-rabbit li {
-        padding: var(--ddd-spacing-0);
-        margin: var(--ddd-spacing-0);
-      }
-      #follow-the-white-rabbit li {
-        font-size: var(--ddd-font-size-xs);
-        list-style: none;
-      }
-      #follow-the-white-rabbit li strong,
-      #follow-the-white-rabbit li a {
-        padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
-        color: var(--ddd-theme-default-coalyGray);
-        display: block;
-        font-weight: var(--ddd-font-weight-bold);
-      }
-      #follow-the-white-rabbit li:focus-within a,
-      #follow-the-white-rabbit li:hover a {
-        background-color: var(--ddd-theme-default-coalyGray);
-        color: var(--ddd-theme-default-globalNeon);
-      }
-    </style> -->
   </body>
 </html>
