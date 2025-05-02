@@ -53,6 +53,28 @@ export class PortfolioPage extends LitElement {
 
       .content {
         font-size: 16px;
+        color: var(--ddd-theme-default-potential75);
+      }
+
+      .image-container {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .profile-pic {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--ddd-theme-accent);
+      }
+
+      .about-text {
+        max-width: 500px;
+        font-size: 16px;
+        color: var(--ddd-theme-default-primary);
       }
     `;
   }

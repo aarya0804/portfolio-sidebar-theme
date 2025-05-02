@@ -78,6 +78,23 @@
         border-radius: 10px;
         padding-left: 32px;
       }
+      .about-me {
+        display: flex;
+        flex-direction: row;
+      }
+      .profile-pic {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .project-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
     </style>
   </head>
 
@@ -90,17 +107,27 @@
         type="module"
         src="https://unpkg.com/@haxtheweb/scroll-button/scroll-button.js?module"
       ></script>
+
       <portfolio-page
         title="About me"
         pagenumber="1"
         id="page1"
         class="screen1"
       >
-        <p>
-          My name is Aarya and I'm a Human Centered Design and Development major
-          with Informatics focus. I enjoy building digital experiences that are
-          thoughtful, accessible, and user-first.
-        </p>
+        <div class="about-me">
+          <img
+            src="./assets/Aarya-image.jpg"
+            alt="Aarya's profile photo"
+            class="profile-pic"
+          />
+          <div class="about-text">
+            <p>
+              My name is Aarya and I'm a Human Centered Design and Development
+              major with Informatics focus. I enjoy building digital experiences
+              that are thoughtful, accessible, and user-first.
+            </p>
+          </div>
+        </div>
       </portfolio-page>
 
       <portfolio-page
@@ -109,8 +136,10 @@
         id="page2"
         class="screen2"
       >
-        <li>Vista Travel App</li>
-        <li>Portfolio built with HAX</li>
+        <div class="project-container">
+          <li>Vista Travel App</li>
+          <li>Portfolio built with HAX</li>
+        </div>
       </portfolio-page>
 
       <portfolio-page title="Skills" pagenumber="3" id="page3" class="screen3">
@@ -140,8 +169,12 @@
         class="screen5"
       >
         <p>
-          Email: ava6560@psu.edu<br />
-          LinkedIn: linkedin.com/in/aarya0804
+          Email:
+          <a href="mailto:ava6560@psu.edu">ava6560@psu.edu</a><br />
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/aarya-awasthy/" target="_blank">
+            linkedin.com/in/aarya-awasthy
+          </a>
         </p>
       </portfolio-page>
     </portfolio-sidebar-theme>
