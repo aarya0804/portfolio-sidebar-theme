@@ -88,12 +88,18 @@
         border-radius: 50%;
         object-fit: cover;
       }
-      .project-container {
+      /* .project-container {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         padding: 20px;
+      } */
+
+      .project-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 32px;
       }
     </style>
   </head>
@@ -107,6 +113,8 @@
         type="module"
         src="https://unpkg.com/@haxtheweb/scroll-button/scroll-button.js?module"
       ></script>
+      <script type="module" src="./ddd-card.js"></script>
+      <script type="module" src="./ddd-card-list.js"></script>
 
       <portfolio-page
         title="About me"
@@ -136,9 +144,41 @@
         id="page2"
         class="screen2"
       >
-        <div class="project-container">
-          <li>Vista Travel App</li>
-          <li>Portfolio built with HAX</li>
+        <div class="project-wrapper">
+          <ddd-card-list>
+            <ddd-card
+              title="Vista Travel App"
+              image="./assets/vista-preview.jpg"
+              link="https://www.figma.com/design/q39r6cwTbUSv2zUq7ss7jr/Final-Prototype?node-id=0-1&p=f&t=Py7RCaNhXdh8NYw1-0"
+            >
+              <p>
+                An AI-powered travel planner app that suggests hidden gems,
+                custom itineraries, and safety guidance.
+              </p>
+            </ddd-card>
+
+            <ddd-card
+              title="Personal Portfolio"
+              image="./assets/portfolio-preview.jpg"
+              link="https://github.com/aarya0804/portfolio-sidebar-theme"
+            >
+              <p>
+                My personal portfolio built using web components, Lit, and HAX-
+                showcasing design, development, and UX skills.
+              </p>
+            </ddd-card>
+
+            <ddd-card
+              title="Recreated PSU website"
+              image="./assets/psu-site-preview.jpg"
+              link="https://github.com/aarya0804/ddd-card-list"
+            >
+              <p>
+                Recreated an interactive PSU site using web components, LIT, and
+                DDD cards.
+              </p>
+            </ddd-card>
+          </ddd-card-list>
         </div>
       </portfolio-page>
 
