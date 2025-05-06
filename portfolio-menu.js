@@ -19,7 +19,14 @@ export class PortfolioMenu extends LitElement {
 
   constructor() {
     super();
-    this.pages = ["About me", "Projects", "Skills", "Experience", "Contact Me"];
+    // this.pages = ["About me", "Projects", "Skills", "Experience", "Contact Me"];
+    this.pages = [
+      { name: "About me", id: "page1" },
+      { name: "Projects", id: "page2" },
+      { name: "Skills", id: "page3" },
+      { name: "Experience", id: "page4" },
+      { name: "Contact Me", id: "page5" },
+    ];
   }
 
   static get properties() {
@@ -71,8 +78,8 @@ export class PortfolioMenu extends LitElement {
     return html`
       <div class="menu">
         ${this.pages.map(
-          (page, index) =>
-            html` <a title="${page}" href="#page${index}">${page}</a> `
+          (page) =>
+            html` <a title="${page.name}" href="#${page.id}">${page.name}</a> `
         )}
       </div>
     `;

@@ -38,13 +38,18 @@
         color: var(--ddd-primary-17);
       }
 
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
       .screen1 {
         background-color: var(--ddd-theme-default-beige);
-        color: ar(--ddd-theme-default-white);
+        color: var(--ddd-theme-default-white);
       }
 
       .screen2 {
-        background-color: var(--ddd-accent-1);
+        background-color: var(--ddd-theme-default-slateLight);
         color: var(--ddd-theme-default-white);
       }
 
@@ -53,11 +58,11 @@
         color: var(--ddd-theme-default-white);
       }
       .screen4 {
-        background-color: var(--ddd-accent-2);
+        background-color: var(--ddd-theme-default-slateLight);
         color: var(--ddd-theme-default-white);
       }
       .screen5 {
-        background-color: var(--ddd-accent-3);
+        background-color: var(--ddd-theme-default-beige);
         color: var(--ddd-theme-default-white);
       }
 
@@ -80,26 +85,131 @@
       }
       .about-me {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
       }
+
+      .section-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        padding: 0 75px;
+      }
+
+      .section-block {
+        background-color: var(--ddd-theme-default-slateLight);
+        border-radius: 10px;
+        box-shadow: var(--ddd-boxShadow-sm);
+        padding: 0;
+        flex: 1;
+        min-width: 200px;
+        overflow: hidden;
+      }
+
+      .section-block h3,
+      .section-block p {
+        padding: 16px;
+        margin: 0;
+      }
+
+      .section-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 16px;
+        display: block;
+        border-radius: 10px 10px 0 0;
+        margin: 0;
+        padding: 0;
+      }
+
       .profile-pic {
         width: 200px;
         height: 200px;
         border-radius: 50%;
         object-fit: cover;
       }
-      /* .project-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-      } */
 
       .project-wrapper {
         display: flex;
         justify-content: center;
         padding: 32px;
+      }
+
+      .connect-wrapper {
+        width: fit-content;
+      }
+
+      a.connect-btn:link,
+      a.connect-btn:visited {
+        display: inline-block;
+        padding: 10px 16px;
+        background-color: var(--ddd-theme-default-beaverBlue);
+        color: white;
+        text-decoration: none;
+        text-align: left;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 20px;
+        transition: color 0.3s ease;
+        margin-top: 16px;
+        width: fit-content;
+      }
+
+      a.connect-btn:hover,
+      a.connect-btn:active {
+        background-color: var(--ddd-theme-default-nittanyNavy);
+        color: white;
+        text-decoration: none;
+      }
+
+      .skills-section {
+        text-align: center;
+        padding: 32px 0;
+      }
+
+      .skills-section h4 {
+        color: var(--ddd-theme-primary);
+        font-size: 28px;
+        margin-bottom: 24px;
+      }
+
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 55px;
+        padding: 0 50px;
+      }
+
+      .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;
+      }
+
+      .skill-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        transition: transform 0.2s ease-in-out;
+        /* border: 2px solid transparent; */
+      }
+
+      .skill-item img:hover {
+        border: 2px solid var(--ddd-theme-primary);
+        background-color: var(--ddd-theme-default-white);
+        transform: translate(-5px);
+        cursor: pointer;
+      }
+
+      .skill-item p {
+        margin-top: 12px;
+        font-size: 20px;
+        color: var(--ddd-theme-primary);
+        font-weight: bold;
       }
     </style>
   </head>
@@ -134,6 +244,49 @@
               major with Informatics focus. I enjoy building digital experiences
               that are thoughtful, accessible, and user-first.
             </p>
+
+            <div class="connect-wrapper">
+              <a href="#page5" class="connect-btn">Connect</a>
+            </div>
+
+            <div class="section-wrapper">
+              <div class="section-block">
+                <img
+                  src="./assets/software-dev.jpg"
+                  alt="software design and dev"
+                  class="section-image"
+                />
+                <h3>Software Design and Development</h3>
+                <p>
+                  I create apps and websites that are both practical and
+                  visually appealing. My goal is to create intuitive user
+                  experiences by combining intelligent design with clean and
+                  efficient coding. Whether it's simplifying navigation for a
+                  music discovery app or creating a mini-game within a
+                  tourist-navigation application that helps users explore local
+                  favorites at their traveling destinations. I aim to build
+                  digital solutions that are user-friendly and bridges people
+                  and modern technology.
+                </p>
+              </div>
+
+              <div class="section-block">
+                <img
+                  src="./assets/HCI-tech.jpg"
+                  alt="HCI technology"
+                  class="section-image"
+                />
+                <h3>Human-Centered Interactions with Technology</h3>
+                <p>
+                  I believe that technology should benefit humans, and not the
+                  other way around. By focusing on human-centered design, I
+                  create tools and systems that are simple to use and meet
+                  real-world demands. My intention is to make technology feel
+                  more approachable, trustworthy, and useful to us in everyday
+                  life.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </portfolio-page>
@@ -183,10 +336,47 @@
       </portfolio-page>
 
       <portfolio-page title="Skills" pagenumber="3" id="page3" class="screen3">
-        <p>
-          Languages: Java, Python, HTML/CSS, JavaScript<br />
-          Tools: Figma, GitHub, Adobe, MySQL
-        </p>
+        <div class="skills-section">
+          <h4>Technical Skills</h4>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img src="./assets/python-lang.jpg" alt="Python" />
+              <p>Python</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/MySQL-lang.jpg" alt="MySQL" />
+              <p>MySQL</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/css-lang.jpg" alt="CSS" />
+              <p>CSS</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/java-lang.jpg" alt="Java" />
+              <p>Java</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/html-lang.jpg" alt="HTML" />
+              <p>HTML</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/js-lang.jpg" alt="JavaScript" />
+              <p>JavaScript</p>
+            </div>
+          </div>
+
+          <h4>Design Skills</h4>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img src="./assets/figma-lang.jpg" alt="Figma" />
+              <p>Figma</p>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/adobe-lang.jpg" alt="Adobe" />
+              <p>Adobe</p>
+            </div>
+          </div>
+        </div>
       </portfolio-page>
 
       <portfolio-page

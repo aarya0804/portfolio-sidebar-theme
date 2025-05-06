@@ -44,6 +44,7 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
         :host {
           display: inline-block;
           width: 360px;
+
           margin: 0 24px 40px 0;
           color: var(--ddd-theme-text-default);
           background-color: var(--ddd-theme-default-white);
