@@ -66,6 +66,11 @@
         color: var(--ddd-theme-default-white);
       }
 
+      portfolio-page {
+        padding-top: 100px;
+        display: block;
+      }
+
       #topbar {
         position: fixed;
         top: 0;
@@ -211,12 +216,14 @@
         color: var(--ddd-theme-primary);
         font-weight: bold;
       }
+
+      
     </style>
   </head>
 
   <body>
     <div id="topbar">Aarya's Portfolio</div>
-    <portfolio-sidebar-theme>
+      <portfolio-sidebar-theme>
       <script type="module" src="./portfolio-sidebar-theme.js"></script>
       <script type="module" src="./portfolio-page.js"></script>
       <script
@@ -247,6 +254,9 @@
 
             <div class="connect-wrapper">
               <a href="#page5" class="connect-btn">Connect</a>
+              <p>
+                <h3>My Areas of interest:</h3>
+              </p>
             </div>
 
             <div class="section-wrapper">
@@ -385,11 +395,39 @@
         id="page4"
         class="screen4"
       >
-        <p>
-          Undergraduate Learning Assistant (AI & Art)<br />
-          NSO Crew Member<br />
-          HAX Lab Intern
-        </p>
+        <div class="project-wrapper">
+          <ddd-card-list>
+            <ddd-card 
+              title="IST 130 Learning Assistant"
+              image="./assets/UG-LA.jpg">
+              <p>
+                As a Learning Assistant for IST 130, I assist students in
+                understanding the course material, provide guidance on projects,
+                and facilitate discussions to enhance their learning experience.
+              </p>
+          </ddd-card>
+
+          <ddd-card 
+            title="NSO Crew Member 2023"
+            image="./assets/NSO-23.jpg"
+            >
+            <p>
+              As a member of the New Student Orientation (NSO) crew, I help
+              incoming students transition to college life by providing support,
+              information, and resources during their New Student Orientation sessions.
+            </p>
+          </ddd-card>
+          <ddd-card
+            title="Incoming: HAX Lab Intern"
+            image="./assets/HAX-intern.jpg">
+              <p>
+                As an intern at the HAX Lab, I will get to work on various projects related to
+                web components and design systems, and contribute to the development of
+                innovative tools and resources for the HAX community.
+              </p>
+            </ddd-card>
+          </ddd-card-list>
+        </div>
       </portfolio-page>
 
       <portfolio-page

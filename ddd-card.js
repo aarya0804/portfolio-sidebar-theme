@@ -139,7 +139,7 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
       <div class="wrapper">
         <h3>${this.title}</h3>
         <slot></slot>
-        <a href="${this.link}" target="_blank">Explore ></a>
+        <a href="${this.link}" target="_blank">View Project</a>
       </div>`;
   }
 }
