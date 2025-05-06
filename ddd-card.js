@@ -44,7 +44,6 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
         :host {
           display: inline-block;
           width: 360px;
-
           margin: 0 24px 40px 0;
           color: var(--ddd-theme-text-default);
           background-color: var(--ddd-theme-default-white);
@@ -53,7 +52,7 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
           overflow: hidden;
           max-width: 400px;
           min-width: 360px;
-          min-height: 520px;
+          min-height: 400px;
         }
 
         .wrapper {
@@ -128,19 +127,35 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
         a:active {
           background-color: var(--ddd-theme-default-nittanyNavy);
         }
+
+        .project-link:empty {
+          display: none;
+        }
       `,
     ];
   }
 
   // Lit render the HTML
   render() {
-    return html` <img class="img" src="${this.image}" alt="${this.title}" />
+    let button = "";
+
+    if (this.link.length > 0) {
+      button = html`
+        <a href="${this.link}" class="project-link" target="_blank">
+          View Project</a
+        >
+      `;
+    }
+
+    return html`
+      <img class="img" src="${this.image}" alt="${this.title}" />
       <div class="line"></div>
       <div class="wrapper">
         <h3>${this.title}</h3>
         <slot></slot>
-        <a href="${this.link}" target="_blank">View Project</a>
-      </div>`;
+        ${button}
+      </div>
+    `;
   }
 }
 
