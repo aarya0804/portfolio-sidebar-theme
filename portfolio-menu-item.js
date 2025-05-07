@@ -38,7 +38,7 @@ export class PortfolioMenuItem extends LitElement {
       button {
         width: 100%;
         padding: 12px;
-        background-color: var(--ddd-theme-primary-18); //dark blue from DDD
+        background-color: var(--ddd-theme-primary-18); 
         color: white;
         border: none;
         border-radius: 4px;
@@ -51,10 +51,10 @@ export class PortfolioMenuItem extends LitElement {
 
       button:hover,
       button:focus {
-        background-color: var(--ddd-theme-primary-28); //lighter blue on hover
+        background-color: var(--ddd-theme-primary-28); 
         color: var(--ddd-theme-default-white);
         outline: none;
-        border: 2px solid var(--ddd-theme-accent); //border on hover
+        border: 2px solid var(--ddd-theme-accent); 
       }
     `;
   }
