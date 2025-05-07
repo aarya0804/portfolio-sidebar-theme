@@ -3,6 +3,8 @@
  * @license Apache-2.0, see LICENSE for full text.
  */
 import { LitElement, html, css } from "lit";
+import "./ddd-card.js";
+import "./ddd-card-list.js";
 
 /**
  * portfolio-page
@@ -75,6 +77,11 @@ export class PortfolioPage extends LitElement {
         max-width: 500px;
         font-size: 16px;
         color: var(--ddd-theme-default-primary);
+      }
+      .about-me {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
       }
     `;
   }

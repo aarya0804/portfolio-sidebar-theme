@@ -36,7 +36,7 @@ export class PortfolioContent extends LitElement {
         padding: 16px;
         background-color: var(--ddd-theme-default-beige);
         font-family: var(--ddd-font-body, Arial, sans-serif);
-        min-height: 300px; /* Ensure content area has some height */
+        min-height: 300px; 
       }
 
       .content {

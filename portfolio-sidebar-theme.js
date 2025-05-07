@@ -56,7 +56,7 @@ export class PortfolioSidebarTheme extends DDDSuper(I18NMixin(LitElement)) {
           padding: 24px;
         }
         ::slotted(portfolio-page) {
-          margin-left: 275px; /* Space for the sidebar */
+          margin-left: 275px; 
         }
 
         h3 span {

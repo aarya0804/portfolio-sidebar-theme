@@ -19,7 +19,6 @@ export class PortfolioMenuItem extends LitElement {
   constructor() {
     super();
     this.title = "Menu Item";
-    //this.pageNumber = 0;
   }
 
   static get properties() {

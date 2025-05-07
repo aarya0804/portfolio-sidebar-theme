@@ -19,7 +19,6 @@ export class PortfolioMenu extends LitElement {
 
   constructor() {
     super();
-    // this.pages = ["About me", "Projects", "Skills", "Experience", "Contact Me"];
     this.pages = [
       { name: "About me", id: "page1" },
       { name: "Projects", id: "page2" },
@@ -43,7 +42,6 @@ export class PortfolioMenu extends LitElement {
         width: 250px;
         padding: 16px;
         height: 100%;
-        /* background-color: var(--ddd-theme-default-beaverBlue); */
         color: var(--ddd-theme-default-white);
         border-right: 2px solid var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation, Arial, sans-serif);
